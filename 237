@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <conio.h>
+void main() {
+    int mode, tool;
+    clrscr();
+    printf("1.Idle\n2.Active\nEnter robot mode: ");
+    scanf("%d", &mode);
+    switch(mode) {
+        case 1: printf("Robot Idle."); break;
+        case 2:
+            printf("\nSelect Tool: 1.Gripper 2.Welder\n");
+            scanf("%d", &tool);
+            switch(tool) {
+                case 1: printf("Tool: Gripper selected."); break;
+                case 2: printf("Tool: Welder selected."); break;
+                default: printf("Invalid Tool!");
+            }
+            break;
+        default: printf("Invalid Mode!");
+    }
+    getch();
+}
